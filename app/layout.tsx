@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+<<<<<<< HEAD
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/Sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip"; // Standard shadcn path
+=======
+import Sidebar from "@/components/Sidebar";
+>>>>>>> de64e5f (feat: initial commit)
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,8 +34,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`flex ${geistSans.variable} ${geistMono.variable} antialiased dark:bg-white` }
       >
+<<<<<<< HEAD
         <TooltipProvider>
           <SidebarProvider>
             <AppSidebar />
@@ -47,6 +52,12 @@ export default function RootLayout({
             </main>
           </SidebarProvider>
         </TooltipProvider>
+=======
+      <Sidebar />
+      <div className="p-3 max-w-max h-screen overflow-y-auto">
+        {children}
+        </div>
+>>>>>>> de64e5f (feat: initial commit)
       </body>
     </html>
   );
